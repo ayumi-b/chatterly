@@ -1,28 +1,25 @@
 'use strict';
 
-function hello() {
-  return 'world';
-};
 
 var fb = new Firebase('https//verbiage.firebaseio.com/');
 
-$('form').submit(function (e) {
-  var $form = $(e.target),
-      $nameInput = $form.find('input[name="name"]'),
-      $textInput = $form.find('input[name="text"]'),
-      name   = $nameInput.val(),
-      text   = $textInput.val();
+$('body').on('click', '.postIt', function(event) {
+  event.preventDefault();
 
-  $textInput.val('');
+  // get name and message from input boxes
+  var chatGuy =  $('.chatGuy').val();
+  var chatText = $('.chatText').val();
 
-  fb.push({name: name, text: text});
-  e.preventDefault();
+  // send chatText to firebase
+  fb.push({name: chatGuy, text: chatText});
+
+  $('.chatText').val('');
+  location.reload(true);
+
 });
 
-fb.once('value', function (snap) {
-  var messages = snap.val();
-
-  _.forEach(messages, function (m) {
-    addChatMessage(m.name, m.text);
-  });
+fb.limitToLast(20).on("child_added", function(snapshot) {
+    var newChat = snapshot.val();
+    $('.chatbox').prepend('<p><em>' + newChat.name + '</em>: ' + newChat.text + '</p>');
 });
+

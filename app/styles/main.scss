@@ -1,0 +1,34 @@
+
+@import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+h1 {
+  color: tomato;
+}
+.output {
+  background: lightblue;
+  min-height: 500px;
+  margin: 20px 0;
+}
+
+form {
+  margin: 20px 0;
+}
+
+img {
+  max-width: 200px;
+}
+/* Custom container */
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+  min-height:100%;
+  background-color:#110022;
+  color:#eee;
+  overflow:hidden;
+}
+
+
+.v-center {
+  margin-top:7%;
+}
