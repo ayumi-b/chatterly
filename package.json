@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ayumi-b/MyFirstGruntFile.git"
+    "url": "https://github.com/ayumi-b/chatterly.git"
   },
   "author": "ayumi fukuda bennett <ayumi.fukuda@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ayumi-b/MyFirstGruntFile/issues"
+    "url": "https://github.com/ayumi-b/chatterly/issues"
   },
-  "homepage": "https://github.com/ayumi-b/MyFirstGruntFile",
+  "homepage": "https://github.com/ayumi-b/chatterly",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^2.2.0",
