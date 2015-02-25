@@ -1,14 +1,21 @@
 
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
 
+h1  {
+  font-size: 5em;
+}
 
-h1 {
+h1,
+h2,
+h3 {
   color: tomato;
 }
-.output {
+.chatbox {
   background: lightblue;
   min-height: 500px;
   margin: 20px 0;
+  color: black;
+  font-size: 1.3em;
 }
 
 form {
@@ -18,13 +25,13 @@ form {
 img {
   max-width: 200px;
 }
-/* Custom container */
+
+
 .container-full {
   margin: 0 auto;
   width: 100%;
   min-height:100%;
   background-color:#110022;
-  color:#eee;
   overflow:hidden;
 }
 
